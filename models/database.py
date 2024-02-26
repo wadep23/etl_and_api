@@ -21,7 +21,7 @@ class Conditions(BaseModel):
     report_date = db.Column(db.Date)
     clinician_specialty = db.Column(db.String(100))
     value = db.Column(db.String(100))
-    person_id = db.Column(db.Integer)
+    person_id = db.Column(db.Integer, nullable=False)
 
 
 class Labs(BaseModel):
@@ -36,7 +36,7 @@ class Labs(BaseModel):
     value = db.Column(db.Float)
     normal_range_of_value = db.Column(db.String(100))
     result_evaluation_or_flag = db.Column(db.String(100))
-    person_id = db.Column(db.Integer)
+    person_id = db.Column(db.Integer, nullable=False)
 
     def get_latest_hgb_level(self):
         latest_record = (
@@ -59,7 +59,7 @@ class Lifestyle(BaseModel):
     clinician_specialty = db.Column(db.String(100))
     value = db.Column(db.String(100))
     secondary_value = db.Column(db.String(100), default="Null")
-    person_id = db.Column(db.Integer)
+    person_id = db.Column(db.Integer, nullable=False)
 
 
 class Rx(BaseModel):
@@ -74,7 +74,7 @@ class Rx(BaseModel):
     end_date = db.Column(db.Date)
     rx_date = db.Column(db.Date)
     rx_norm = db.Column(db.Float)
-    person_id = db.Column(db.Integer)
+    person_id = db.Column(db.Integer, nullable=False)
 
     def is_prescribed_alpha_blockers(self):
         alpha_blockers = (
@@ -95,4 +95,4 @@ class Tests(BaseModel):
     icd_code = db.Column(db.String(100))
     report_date = db.Column(db.Date)
     value = db.Column(db.String(100))
-    person_id = db.Column(db.Integer)
+    person_id = db.Column(db.Integer, nullable=False)
