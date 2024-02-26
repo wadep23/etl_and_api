@@ -1,3 +1,11 @@
+"""
+
+This is the Load layer of the ETL pipeline.
+This step will output cleaned CSV files along side database insertion.
+This is done for spot checking files for use in refining the Transformation step.
+
+"""
+
 import os
 import sys
 

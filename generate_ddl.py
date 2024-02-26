@@ -1,15 +1,15 @@
+""" This is a simple script to generate table DDL's based on the Schema for this projects SQLite """
+
 import os
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.schema import CreateTable
-from models.database import db
-
 
 database_dir = os.path.join(os.getcwd(), "data/database")
 if not os.path.exists(database_dir):
     os.makedirs(database_dir)
 
-database_file = "ae.db"
-database_path = os.path.join(database_dir, database_file)
+DATABASE_FILE = "ae.db"
+database_path = os.path.join(database_dir, DATABASE_FILE)
 
 engine = create_engine(f"sqlite:///{database_path}")
 

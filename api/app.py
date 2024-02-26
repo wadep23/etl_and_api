@@ -1,14 +1,22 @@
+"""
+
+This is the Server layer of the application and contains the API endpoints and logic.
+In the future I would like to extract out the business logic and routes into seperate modules 
+for scalability and readability.
+
+"""
+
 import os
 
-from flask import Flask, jsonify
-from sqlalchemy import func
 from datetime import datetime, timedelta
+from sqlalchemy import func
+from flask import Flask, jsonify
 
 from models.database import db, Conditions, Labs, Lifestyle, Rx, Tests
 
 database_dir = os.path.join(os.getcwd(), "data/database")
-database_file = "ae.db"
-database_path = os.path.join(database_dir, database_file)
+DATABASE_FILE = "ae.db"
+database_path = os.path.join(database_dir, DATABASE_FILE)
 
 if not os.path.isdir(database_dir):
     os.makedirs(database_dir)

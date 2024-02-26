@@ -1,3 +1,11 @@
+"""
+
+This is the transformation step for the ETL pipeline.
+This portion is not complete as there is very limited transformations taking place.
+Given more time I would have liked to use a dictionary file for typo handling etc.
+
+"""
+
 import sys
 
 import pandas as pd

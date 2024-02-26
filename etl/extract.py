@@ -1,3 +1,10 @@
+""" 
+
+The initial extraction step in the ETL pipeline. 
+This is engineered to read in files stored in the data/raw directory 
+
+"""
+
 import os
 import sys
 
@@ -42,8 +49,8 @@ class Extractor:
 
 if __name__ == "__main__":
     try:
-        raw_data_directory = "data/raw"
-        extractor = Extractor(raw_data_directory)
+        RAW_DATA_DIRECTORY = "data/raw"
+        extractor = Extractor(RAW_DATA_DIRECTORY)
         extracted_data = extractor.extract()
 
         for file_name, data_frame in extracted_data.items():
