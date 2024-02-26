@@ -35,7 +35,7 @@ This project demonstrates a Flask-based API and an ETL (Extract, Transform, Load
    python -m venv venv
    .\venv\Scripts\activate
    ```
-   
+
 4. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
@@ -69,42 +69,3 @@ This project demonstrates a Flask-based API and an ETL (Extract, Transform, Load
 - **GET `/tests`**: Retrieves a list of all tests. Returns the tests data as JSON.
 - **GET `/person/<int:person_id>`**: Obtains all data (conditions, labs, lifestyle, prescriptions, tests) for a specific person by their ID. Returns a comprehensive dataset for the person as JSON.
 - **GET `/person/<int:person_id>/details`**: Fetches detailed information for a specific person, including prescription status for alpha blockers, latest hemoglobin levels, and the number of visits in the last six months. Returns detailed person data as JSON.
-
-
-Certainly, Master. Here's the refined section for setting up the virtual environment with harmonized instructions for both Mac and Windows users:
-
----
-
-## Installation and Usage
-
-### Prerequisites
-
-- Ensure Python is installed on your system.
-- A virtual environment is recommended for managing project dependencies.
-
-### Setup
-
-1. Clone the repository to your local machine.
-2. Navigate to the project's root directory.
-3. Create and activate a virtual environment:
-
-   **For Mac:**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate
-   ```
-
-   **For Windows:**
-   ```bash
-   python -m venv venv
-   .\venv\Scripts\activate
-   ```
-
-4. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
----
-
-This adjustment ensures that the instructions for both operating systems are formatted consistently, enhancing readability and ease of use. Should you require further modifications or assistance, please do not hesitate to command.
